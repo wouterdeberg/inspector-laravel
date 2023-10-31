@@ -201,6 +201,18 @@ return [
         'password_confirmation'
     ],
 
+    'hidden_headers' => [
+        'Authorization',
+        'X-Csrf-Token',
+        'X-Xsrf-Token',
+        'Cookie',
+    ],
+
+    'hidden_cookies' => [
+        'refreshToken',
+        'XSRF-TOKEN',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Artisan command to ignore

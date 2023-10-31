@@ -77,7 +77,9 @@ class InspectorServiceProvider extends ServiceProvider
                 ->setVersion(self::VERSION)
                 ->setTransport(config('inspector.transport', 'async'))
                 ->setOptions(config('inspector.options', []))
-                ->setMaxItems(config('inspector.max_items', 100));
+                ->setMaxItems(config('inspector.max_items', 100))
+                ->setHiddenHeaders(config('inspector.hidden_headers', []))
+                ->setHiddenCookies(config('inspector.hidden_cookies', []));
 
             return new Inspector($configuration);
         });
